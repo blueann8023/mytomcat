@@ -33,7 +33,7 @@ public class ResponseFacade implements ServletResponse{
 
     public PrintWriter getWriter() throws IOException {
         // TODO Auto-generated method stub
-        return null;
+        return servletResponse.getWriter();
     }
 
     public void setCharacterEncoding(String charset) {

@@ -1,4 +1,4 @@
-package com.lm.mytomcat.chap3.connector;
+package com.lm.mytomcat.chap3;
 
 import java.io.File;
 import java.io.IOException;
@@ -50,6 +50,7 @@ public class ServletProcessor {
         try {
             servlet = (Servlet)servletClass.newInstance();
             servlet.service(request, response);
+            ((HttpResponse) response).finishResponse();
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
